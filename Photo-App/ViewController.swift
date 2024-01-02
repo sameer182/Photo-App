@@ -34,6 +34,11 @@ class ViewController: UIViewController {
         
         view.addSubview(button)
         getRandompic()
+        button.addTarget(self, action: #selector(TapButton), for: .touchUpInside)
+    }
+    
+    @objc func TapButton(){
+        getRandompic()
     }
     //Added the button
     override func viewDidLayoutSubviews() {
