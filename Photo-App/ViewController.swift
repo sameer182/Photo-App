@@ -23,6 +23,21 @@ class ViewController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         return button
     }()
+    
+    //Random colors
+    let colors: [UIColor] = [
+        .systemRed,
+        .systemOrange,
+        .systemYellow,
+        .systemTeal,
+        .systemPink,
+        .systemBlue,
+        .systemCyan,
+        .systemGray,
+        .systemMint,
+        .systemBrown
+    ]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +51,12 @@ class ViewController: UIViewController {
         getRandompic()
         button.addTarget(self, action: #selector(TapButton), for: .touchUpInside)
     }
-    
+    //Button call
     @objc func TapButton(){
         getRandompic()
+        
+        //Get random colors
+        view.backgroundColor = colors.randomElement()
     }
     //Added the button
     override func viewDidLayoutSubviews() {
