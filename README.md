@@ -1,5 +1,5 @@
 # Photo-App
 
-This the random Photo Application
+This the random Photo Generator Application
 
 > Swift
